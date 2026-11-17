@@ -1,0 +1,34 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>AI Mock Interview Dashboard</title>
+    <link rel="stylesheet" href="{{ url_for('static', filename='style.css') }}">
+</head>
+<body>
+    <div class="container">
+        <h1>Welcome {{ name }}!</h1>
+        <h2>Select Your Interview Category</h2>
+
+        <form action="/interview/Python" method="GET">
+            <button type="submit">Python Interview</button>
+        </form>
+        <br>
+
+        <form action="/interview/Java" method="GET">
+            <button type="submit">Java Interview</button>
+        </form>
+        <br>
+
+        <form action="/interview/SQL" method="GET">
+            <button type="submit">SQL Interview</button>
+        </form>
+        <br>
+
+        <form action="/interview/HR" method="GET">
+            <button type="submit">HR Interview</button>
+        </form>
+
+        <p class="footer">Practice • Improve • Succeed</p>
+    </div>
+</body>
+</html>

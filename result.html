@@ -1,0 +1,21 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Interview Result</title>
+    <link rel="stylesheet" href="{{ url_for('static', filename='style.css') }}">
+</head>
+<body>
+    <div class="container">
+        <h1>Interview Completed!</h1>
+        <h2>{{ category }} Interview Result</h2>
+
+        <h1>Your Score: {{ score }}/30</h1>
+
+        <h2>Feedback</h2>
+        <p>{{ feedback }}</p>
+
+        <br>
+        <a href="/">Go to Home</a>
+    </div>
+</body>
+</html>

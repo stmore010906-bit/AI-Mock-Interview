@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>AI Mock Interview</title>
+    <link rel="stylesheet" href="{{ url_for('static', filename='style.css') }}">
+</head>
+<body>
+    <div class="container">
+
+        <h1>{{ category }} Interview</h1>
+        <h2>Answer the following questions</h2>
+
+        <form action="/submit" method="POST">
+
+            <input type="hidden" name="category" value="{{ category }}">
+
+            {% for question in questions %}
+                <p>{{ loop.index }}. {{ question }}</p>
+
+                <textarea name="answer{{ loop.index }}"
+                placeholder="Write your answer here..."
+                required></textarea>
+
+                <br><br>
+            {% endfor %}
+
+            <button type="submit">Submit Answers</button>
+
+        </form>
+
+    </div>
+</body>
+</html>
